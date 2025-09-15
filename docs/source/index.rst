@@ -20,21 +20,23 @@ Pironman 5 UPS
 
 **Pironman 5 UPS Overview**
 
-Pironman 5 UPS is the latest addition to our Pironman Raspberry Pi case series, designed exclusively for the new Raspberry Pi 5. It’s not only a powerful local network storage (UPS) system, but also a versatile personal server capable of hosting multimedia applications, game emulators, ad-blocking services, and more.
+The **Pironman 5 UPS** is the latest addition to the Pironman Raspberry Pi case series, purpose-built for the new Raspberry Pi 5.  
+It integrates the **PiPower5 module** with a full **Uninterruptible Power Supply (UPS)** system, providing reliable protection against unstable input power and unexpected outages to ensure continuous operation.
 
-As a high-performance UPS solution, Pironman 5 UPS features:
+Equipped with a built-in **7.4V 2000mAh lithium battery**, the Pironman 5 UPS delivers up to **5V/5A output power** and supports **20W fast charging**.  
+Beyond power security, it also incorporates advanced system features, including:
 
-* **Dual Network Ports**: Built-in 2.5G Ethernet port and the Raspberry Pi’s native Gigabit Ethernet, offering high-speed data transfer and better network performance.
-* **Dual Drive Bays with RAID Support**: Supports two 3.5" or 2.5" SATA drives and allows software RAID 0 or RAID 1 configuration for flexible storage capacity and data redundancy.
-* **Efficient Cooling System**: Equipped with a large 90mm fan for effective, quiet cooling of the entire system.
-* **OLED Status Display**: Integrated OLED screen displays essential system stats and drive information in real-time, helping you monitor device health at a glance.
-* **User-Friendly Interface Design**: Converts the micro HDMI port to a standard HDMI connector, and adds a front-access USB port for convenient device interaction.
+- **Active Cooling**: Three high-efficiency fans for effective thermal management.  
+- **Visual Monitoring**: An onboard OLED display for real-time system information.  
+- **Lighting Effects**: A 4x8 **RGB LED matrix** for customizable illumination.  
+- **High-Speed Expansion**: Dual **PCIe Gen2 x1 M.2 M-key slots** for NVMe SSDs, AI accelerators, or other compatible PCIe devices.  
 
-Pironman 5 UPS is a professional-grade solution tailored for users building their own private cloud, home media center, or edge computing node.
+With its combination of power redundancy, thermal control, system monitoring, and expansion flexibility, the Pironman 5 UPS is designed to transform the Raspberry Pi 5 into a stable, powerful, and versatile workstation-class platform.
 
 
-.. .. image:: img/pironman5.JPG
-..     :width: 400
+
+.. image:: img/Pironman5UPS.JPG
+    :width: 400
 
 
 
@@ -53,38 +55,39 @@ If you have any questions, please send an email to service@sunfounder.com and we
     what_do_we_need    
     assembly_instructions
     install/install_the_os
-    omv
     set_up/set_up_pironman5
     control/control_pironman5
-    advanced/advanced
+    hardware/hardware
+    power_safe_function
+    home_server/home_server
     faq
 
 
 
-    
+
 
 **Parameters**
 
-* Dimension: 108.8 x 108.8 x 216mm
+* Dimension: 108 x 87 x 125mm
 * Material
     * Main body: aluminum alloy
     * Side panel: acrylic
 * Support Platform: Raspberry Pi 5
-* Power Input: USB Type C, 12V/4A
-* Interfaces
-    * Raspberry Pi standard 40-Pin GPIO
-    * spring-loaded Micro SD socket
-    * USB Type C power input
-    * 2 x USB 2.0
-    * 2 x USB 3.0
-    * Gigabit LAN port
-    * 2 x 4Kp60 HDMI Type A
-* Power button
-* OLED screen: 0.96'' 128x64 resolution
-* 9025 PWM Fan
-* Tower Cooler
-* Storage: 3.5-inch SATA (compatible with 2.5-inch) x2, micro SD card x1
-* 1220 Battery for RTC
+* Power Input：5-15V，45W Max，USB Type C PD or Screw Terminal
+* Dual M.2 M key PCIe Gen 2 x 1
+* Power for Raspberry Pi: 5V/5A
+* Charge Power：5/10/15/20W optional
+* USB：USB 3.0 x2, USB 2.0 x2 from Raspberry Pi
+* Video: Dual 4Kp60 HDMI Type A display output from Raspberry Pi
+* Display: 0.96'' 128x64 OLED Display
+* Heat dissipation：CPU Fan + 2xFront Fan
+* RGB：4x8 RGB Matrix
+* Battery specifications: 7.4V 2000mAh, 2-cell 18650 Li-ion, VH2.54 2P connector
+* Default On jumper to select whether to power on the device
+* Power switch
+* RTC 1220 battery holder
+* Raspberry Pi 40P GPIO
+
 
 **Copyright Notice**
 
