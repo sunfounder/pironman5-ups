@@ -132,20 +132,33 @@ Below is a detailed description of all key interfaces, indicators, and controls 
 
 --------------------------------------------
 
-**Parameters**
+**Features**
 
-* Input: 5–15V, 45W, USB Type-C PD
-* Output: 5V/5A via Raspberry Pi GPIO, USB Type-A, 2x4P 2.54mm header
-* Charging Power: 20W Max
-* Battery: 7.4V 2-Cell 18650 Li-ion, VH2.54 2P connector
-* Buzzer
-* Default On jumper to select auto power-on when power is connected
-* External power button header for optional power button
-* Shutdown signal jumper to detect device shutdown
-* Onboard indicators: battery status, input source, power button, reverse battery warning, output power
-* Onboard 32-bit Arm Cortex-M23 microcontroller with I²C support
-* I²C interfaces: Raspberry Pi GPIO, SH1.0 4P (compatible with Qwiic / STEMMA QT), 1x4P 2.54mm header
+* **Input**: 5-15V, 45W, USB Type-C PD, DC5.5-2.1
+* **Output**: 5V/5A via Raspberry Pi GPIO, USB Type-A, and 2x4P 2.54mm pin headers
+* **Charging Power**: Up to 20W
+* **Battery Specs**: 7.4V 2 Cell 18650 Li-ion, XH2.54 3P connector
+* **Configurable Settings via Jumpers**:
 
+  * Default On Jumper: Configure whether the device powers on automatically when connected to power.
+  * Shutdown Signal Jumper: Enable detection of the device's shutdown status.
+  * External Power Button Pin Header: Connect an external power button for manual power control.
+
+* **Onboard Indicators and Buttons**:
+  
+  * Battery status indicator
+  * Input source indicator
+  * Power button
+  * Battery reverse connection indicator
+  * Output power indicator
+
+* **Onboard Microcontroller**: 32-bit ARM Cortex-M23, supporting I2C communication
+
+* **I2C communication interfaces**: 
+  
+  * Raspberry Pi GPIO
+  * SH1.0 4P (compatible with Qwiic and STEMMA QT)
+  * 1x4P 2.54mm pin header
 
 --------------------------------------------
 
