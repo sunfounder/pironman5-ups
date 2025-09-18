@@ -20,11 +20,12 @@ PiPower5
 
 PiPower5 is a complete UPS solution and also the core component of the Pironman 5 UPS.
 
+
 It features power path management, charging and discharging of 2-cell lithium batteries, reverse battery protection, overcharge protection, over-discharge protection, and more. With a 5V/5A output and HAT+ configuration, it is perfectly compatible with Raspberry Pi 5.  
 Additionally, the extra USB Type-A output and 2x4P header power output make it suitable for other SBCs such as Arduino, Pico, and ESP32.  
 The onboard microcontroller manages power on/off functions and communicates via I²C to provide information such as input voltage, output voltage, battery voltage, battery capacity, external power status, charging status, and whether the current power source is the battery or USB.
 
-.. image:: img/pipower5.png
+.. image:: img/pipower5_ov.png
 
 
 **Hardware Interfaces & Indicators**
@@ -111,8 +112,26 @@ Below is a detailed description of all key interfaces, indicators, and controls 
 17. **Raspberry Pi GPIO Header (Male Pin Breakout)** 
 
     - Brings Raspberry Pi GPIO pins out for stacking HATs or external expansion.  
-    - **Note**: I²C lines and Pin 26 are already occupied by PiPower5 functions.
     - You can also connect a GPIO extension cable (from the bottom of the side panel) to experiment on a breadboard.
+    - **Note**: I²C pins and pin 26 are already connected and may need to be managed carefully to avoid conflicts.
+
+    .. list-table:: 
+        :widths: 15 15
+        :header-rows: 1
+
+        * - Raspberry Pi
+            - MCU On Board
+        * - SDA
+            - SDA
+        * - SCL
+            - SCL
+        * - GPIO26
+            - SHUTDOWN
+        * - ID_SD
+            - ID_EEPROM SDA
+        * - ID_SC
+            - ID_EEPROM SCL
+
 
 18. **Battery Connector (XH2.54 3P)**  
 
@@ -138,6 +157,7 @@ Below is a detailed description of all key interfaces, indicators, and controls 
 * **Output**: 5V/5A via Raspberry Pi GPIO, USB Type-A, and 2x4P 2.54mm pin headers
 * **Charging Power**: Up to 20W
 * **Battery Specs**: 7.4V 2 Cell 18650 Li-ion, XH2.54 3P connector
+* **Buzzer**
 * **Configurable Settings via Jumpers**:
 
   * Default On Jumper: Configure whether the device powers on automatically when connected to power.
@@ -169,23 +189,25 @@ By default, PiPower5 sets charging power to **5W**.
 You can adjust the charging power using the **Charge SEL** dip switches. Switches 1 and 2 are both set to OFF by default.  
 Use the table below to configure the charging power:
 
-.. list-table::
+   .. list-table::
+      :header-rows: 1
 
-   * - 1
-     - OFF
-     - ON
-     - OFF
-     - ON
-   * - 2
-     - OFF
-     - OFF
-     - ON
-     - ON
-   * - Charge SEL
-     - 5W
-     - 10W
-     - 15W
-     - 20W
+      * - Charge Sel 1
+        - Charge Sel 2
+        - Charging Power
+      * - 0
+        - 0
+        - 5W
+      * - 1
+        - 0
+        - 10W
+      * - 0
+        - 1
+        - 15W
+      * - 1
+        - 1
+        - 20W
+
 
 **How to choose the charging power**
 
@@ -201,3 +223,5 @@ We recommend estimating the Raspberry Pi’s power requirement at **20W to 25W**
 If you are familiar with your Raspberry Pi’s power needs, you may set a higher charging power as long as you reserve enough margin for occasional power spikes.  
 ⚠️ Be cautious: insufficient power may cause the Raspberry Pi to shut down unexpectedly.
 
+
+.. note:: For more details about PiPower5, please refer to the `PiPower5 <https://docs.sunfounder.com/projects/pipower5/en/latest/index.html>`_ page.
